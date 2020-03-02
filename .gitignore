@@ -1,0 +1,15 @@
+# Project exclude paths
+/target/
+.idea/$CACHE_FILE$
+.idea/.gitignore
+.idea/codeStyles
+.idea/compiler.xml
+.idea/dictionaries
+.idea/encodings.xml
+.idea/externalDependencies.xml
+.idea/inspectionProfiles/
+.idea/kotlinc.xml
+.idea/misc.xml
+es7.iml
+src/main/resources/
+src/test/
