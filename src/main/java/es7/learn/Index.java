@@ -1,5 +1,6 @@
-package es7;
+package es7.learn;
 
+import es7.HighRestClient;
 import lombok.SneakyThrows;
 import org.elasticsearch.action.ActionListener;
 import org.elasticsearch.action.index.IndexRequest;

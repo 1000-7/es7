@@ -1,6 +1,7 @@
-package es7;
+package es7.learn;
 
 
+import es7.HighRestClient;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;

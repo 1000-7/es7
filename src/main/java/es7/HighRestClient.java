@@ -5,7 +5,7 @@ import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
 /**
- *
+ * 需要先在本地启动ES服务，才能运行
  * @author unclewang
  * @date 2020/3/2 21:42
  */
