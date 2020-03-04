@@ -31,11 +31,14 @@ public class SGMLIndex {
         log.info("开始解析文件");
         List<SGMLDocument> documents = SGMLReader.readFromDictionary(dir);
         log.info("文件解析完成，开始创建索引，本次共有文件个数：" + documents.size());
+        //使用bulk操作批量的创建索引
         BulkRequest bulkRequest = new BulkRequest();
         long id = 0;
         for (SGMLDocument sd : documents) {
+            //将每一个文档封装成创建索引的请求IndexRequest
             bulkRequest.add(new IndexRequest(indexName).source("docNo", sd.getDocNum(), "docId", sd.getDocId(), "text", sd.getText()));
             id++;
+            //100个请求批处理一次
             if (id % 100 == 0) {
                 try {
                     BulkResponse bulkResponse = client.bulk(bulkRequest, RequestOptions.DEFAULT);

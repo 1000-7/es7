@@ -30,6 +30,7 @@ public class SGMLSearch {
         SearchRequest searchRequest = new SearchRequest(indexName)
                 .source(new SearchSourceBuilder()
                         .query(matchQuery("text", query.getQuery()))
+                        //设置相关性最小得分为10
                         .minScore(10)
                         .size(1000))
                 .scroll(TimeValue.timeValueMinutes(1L));

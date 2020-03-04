@@ -23,6 +23,7 @@ import java.util.List;
 public class TRECDemo {
     public static final String INDEX_NAME = "trec";
 
+    //输出为TREC格式的文件
     public static void writeToFile(List<QueryResult> allResult, String filePath) {
         File resFile = new File(filePath);
         try {
@@ -33,7 +34,7 @@ public class TRECDemo {
     }
 
     public static void main(String[] args) {
-        log.info("1.对文件进行解析并创建索引，索引名称为trec，若已经创建，直接从第二步开始");
+        log.info("1.对文件进行解析并创建索引，索引名称为trec，若已经创建，注释掉下面两行代码，直接从第二步开始");
         SGMLIndex.index("src/main/resources/1991", INDEX_NAME);
         SGMLIndex.index("src/main/resources/1992", INDEX_NAME);
         log.info("2.解析TREC的主题词文件");
